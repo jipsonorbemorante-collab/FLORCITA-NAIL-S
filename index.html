@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florcita Nail's | Manicure & Pedicure Profesional</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4a373;
+            --primary-dark: #bc8a5f;
+            --rose-gold: #b76e79;
+            --accent-pink: #f4acb7;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+            --bg-light: #fff0f5;
+            --card-bg: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --border-color: #f0d0d8;
+            --shadow: 0 10px 30px rgba(183, 110, 121, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #fcf8f8;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        /* Logo Profesional */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--rose-gold), var(--accent-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(183, 110, 121, 0.3);
+        }
+
+        .brand-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: var(--rose-gold);
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .brand-subtitle {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+            font-weight: 600;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--rose-gold);
+        }
+
+        /* --- SECCIÓN HERO & FRASE MOTIVADORA --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(255,240,245,0.8) 0%, rgba(255,255,255,0.9) 100%),
+                        url('https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(244, 172, 183, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        .quote-badge {
+            display: inline-block;
+            background: var(--rose-gold);
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #4a3e3d;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--rose-gold), var(--primary));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(183, 110, 121, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, var(--whatsapp-green), var(--whatsapp-dark));
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* --- SECCIONES COMUNES --- */
+        section {
+            padding: 4.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #3b2d2e;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: var(--accent-pink);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* --- SECCIÓN SOBRE MÍ (ESPECIALISTA) --- */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .about-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 380px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 5px solid #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            width: 100%;
+            max-width: 380px;
+            height: 100%;
+            border: 2px solid var(--rose-gold);
+            border-radius: 15px;
+            z-index: 0;
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--rose-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .about-text .role {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .skills-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-light);
+            color: var(--rose-gold);
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- GALERÍA DE MODELOS --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .gallery-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .gallery-card-info {
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .gallery-card-info h4 {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery-card-info p {
+            font-size: 0.85rem;
+            color: var(--rose-gold);
+            font-weight: 600;
+        }
+
+        /* --- SECCIÓN HORARIOS Y RESERVA DE TURNOS --- */
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .schedule-picker {
+            border-right: 1px solid var(--border-color);
+            padding-right: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--rose-gold);
+        }
+
+        /* Malla de Horarios */
+        .slots-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .slot-btn {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-light);
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .slot-btn small {
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
+
+        .slot-btn:hover:not(.occupied) {
+            background: var(--accent-pink);
+            color: white;
+            border-color: var(--accent-pink);
+        }
+
+        .slot-btn.selected {
+            background: var(--rose-gold) !important;
+            color: white !important;
+            border-color: var(--rose-gold) !important;
+        }
+
+        /* Horario Ocupado */
+        .slot-btn.occupied {
+            background: #e9ecef;
+            color: #adb5bd;
+            border-color: #dee2e6;
+            cursor: not-allowed;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        /* Alerta Mensaje de Ocupado */
+        .alert-occupied {
+            display: none;
+            background-color: #f8d7da;
+            color: #842029;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border: 1px solid #f5c2c7;
+            text-align: center;
+            animation: shake 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+
+        /* --- SECCIÓN PAGO Y COMPROBANTE --- */
+        .payment-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px dashed var(--rose-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .bank-details {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .bank-details li {
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bank-details strong {
+            color: var(--primary-dark);
+        }
+
+        .copy-btn {
+            background: var(--rose-gold);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        /* Subida de archivo comprobante */
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .upload-area:hover {
+            border-color: var(--rose-gold);
+        }
+
+        .upload-icon {
+            font-size: 2rem;
+            color: var(--rose-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        #file-preview {
+            max-width: 100%;
+            max-height: 150px;
+            margin-top: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #2b2324;
+            color: #e0d0d2;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer .brand-footer {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: var(--accent-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 850px) {
+            .about-container, .booking-container {
+                grid-template-columns: 1fr;
+            }
+            .schedule-picker {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding-right: 0;
+                padding-bottom: 2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .quote-text {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV / HEADER -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <div class="logo-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a4 4 0 0 0-4 4c0 3 4 6 4 6s4-3 4-6a4 4 0 0 0-4-4z"/>
+                        <path d="M12 12s-4 3-4 6a4 4 0 0 0 8 0c0-3-4-6-4-6z"/>
+                        <path d="M12 12s-6-1-7 2a4 4 0 0 0 5 5c3 0 2-7 2-7z"/>
+                        <path d="M12 12s6-1 7 2a4 4 0 0 1-5 5c-3 0-2-7-2-7z"/>
+                        <circle cx="12" cy="12" r="2" fill="#ffffff"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="brand-name">Florcita Nail's</span>
+                    <span class="brand-subtitle">Manicure & Pedicure</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Especialista</a></li>
+                    <li><a href="#galeria">Modelos</a></li>
+                    <li><a href="#reservas">Agendar Turno</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO CON FRASE MOTIVADORA -->
+    <div class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="quote-badge">Frase del Día</span>
+            <p class="quote-text">"Tus manos son la carta de presentación de tu alma; regálales el amor y el brillo que se merecen."</p>
+            <span class="quote-author">— Florcita Nail's Studio</span>
+            <br>
+            <a href="#reservas" class="btn-primary">Apartar mi Turno Ahora</a>
+        </div>
+    </div>
+
+    <!-- SECCIÓN SOBRE MÍ / ESPECIALISTA -->
+    <section id="sobre-mi">
+        <div class="section-title">
+            <h2>Tu Especialista</h2>
+            <p>Pasión, delicadeza y belleza en cada detalle</p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop" alt="Especialista Manicurista Florcita">
+            </div>
+            <div class="about-text">
+                <h3>¡Hola! Soy la Creadora de Florcita Nail's</h3>
+                <span class="role">Especialista Certificada en Manicure & Pedicure</span>
+                <p>Bienvenida a mi espacio dedicado al cuidado y embellecimiento de tus manos y pies. Con más de 5 años de experiencia, me especializo en brindarte una atención personalizada, higiénica y con acabados de alta calidad que resaltan tu elegancia natural.</p>
+                <p>Cada diseño es elaborado con paciencia, amor y las mejores marcas del mercado para garantizar durabilidad y salud en tus uñas.</p>
+
+                <div class="skills-list">
+                    <span class="skill-tag">💅 Soft Gel</span>
+                    <span class="skill-tag">✨ Nail Art a Mano Alzada</span>
+                    <span class="skill-tag">🦶 Pedicure Spa</span>
+                    <span class="skill-tag">🌸 Esmaltado Semi-permanente</span>
+                    <span class="skill-tag">🛡️ Acrigel & Esculpidas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GALERÍA DE MODELOS -->
+    <section id="galeria">
+        <div class="section-title">
+            <h2>Catálogo de Modelos</h2>
+            <p>Inspiración para tu próxima cita de belleza</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=600&auto=format&fit=crop" alt="Diseño Baby Boomer">
+                <div class="gallery-card-info">
+                    <h4>Efecto Baby Boomer</h4>
+                    <p>Manicure Delicate & Soft Gel</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600&auto=format&fit=crop" alt="Esmaltado Rojo Pasión">
+                <div class="gallery-card-info">
+                    <h4>Rojo Clásico Elegante</h4>
+                    <p>Esmaltado Semi-permanente</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=600&auto=format&fit=crop" alt="Pedicure Spa">
+                <div class="gallery-card-info">
+                    <h4>Pedicure Spa Relajante</h4>
+                    <p>Limpieza + Exfoliación + Hidratación</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1599948128020-9a44505b0d1b?q=80&w=600&auto=format&fit=crop" alt="Nail Art Minimalista">
+                <div class="gallery-card-info">
+                    <h4>Nail Art Minimalista</h4>
+                    <p>Detalles Florales a Mano Alzada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HORARIOS Y RESERVA DE TURNOS -->
+    <section id="reservas">
+        <div class="section-title">
+            <h2>Aparta tu Turno</h2>
+            <p>Selecciona la fecha, el horario disponible y confirma tu cita vía WhatsApp</p>
+        </div>
+
+        <div class="booking-container">
+            <!-- Columna Izquierda: Selección de Horario -->
+            <div class="schedule-picker">
+                <h3>1. Elige Fecha y Horario</h3>
+                <br>
+                <div class="form-group">
+                    <label for="booking-date">Selecciona el día:</label>
+                    <input type="date" id="booking-date" class="form-control">
+                </div>
+
+                <label style="font-weight: 600; font-size: 0.9rem;">Horarios Disponibles:</label>
+                
+                <!-- Contenedor de Alerta de Horario Ocupado -->
+                <div id="occupied-alert" class="alert-occupied">
+                    HORARIO OCUPADO POR FAVOR ELIJA UNO DISPONIBLE
+                </div>
+
+                <div class="slots-grid" id="slots-container">
+                    <!-- Los botones de horarios se cargan dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Datos del Cliente, Banco y Comprobante -->
+            <div>
+                <h3>2. Pago e Información de Reserva</h3>
+                <br>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="client-name">Nombre y Apellido:</label>
+                        <input type="text" id="client-name" class="form-control" placeholder="Ej: María López" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="client-phone">Número de WhatsApp del Cliente:</label>
+                        <input type="tel" id="client-phone" class="form-control" placeholder="Ej: 0991234567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Servicio a Realizar:</label>
+                        <select id="service-type" class="form-control" required>
+                            <option value="">-- Selecciona un servicio --</option>
+                            <option value="Manicure Semi-permanente">Manicure Semi-permanente (\$15.00)</option>
+                            <option value="Pedicure Spa Completo">Pedicure Spa Completo (\$18.00)</option>
+                            <option value="Combo Mani + Pedi Spa">Combo Mani + Pedi Spa (\$30.00)</option>
+                            <option value="Sistemas Soft Gel / Acrigel">Soft Gel / Acrigel (\$25.00)</option>
+                        </select>
+                    </div>
+
+                    <!-- Datos de Cuenta Bancaria -->
+                    <div class="payment-box">
+                        <strong style="color: var(--rose-gold); font-size: 0.95rem;">Datos para Transferencia / Depósito (Abono 50%)</strong>
+                        <ul class="bank-details">
+                            <li><span>Banco:</span> <strong>Banco Pichincha / Guayaquil</strong></li>
+                            <li><span>Tipo de cuenta:</span> <strong>Ahorros</strong></li>
+                            <li><span>Nº de Cuenta:</span> <strong id="acc-number">2204567890</strong></li>
+                            <li><span>Titular:</span> <strong>Florcita Nail's Studio</strong></li>
+                            <li><span>C.I. / RUC:</span> <strong>1723456789</strong></li>
+                        </ul>
+                        <button type="button" class="copy-btn" onclick="copyAccount()">Copiar Nº de Cuenta</button>
+                    </div>
+
+                    <!-- Subida de Comprobante -->
+                    <div class="form-group">
+                        <label>Subir Comprobante de Depósito:</label>
+                        <div class="upload-area" onclick="document.getElementById('receipt-file').click()">
+                            <div class="upload-icon">📷</div>
+                            <span id="upload-label" style="font-size: 0.85rem; color: var(--text-muted);">Haz clic aquí para seleccionar tu foto del comprobante</span>
+                            <input type="file" id="receipt-file" accept="image/*" style="display: none;" required>
+                            <img id="file-preview" alt="Vista previa del comprobante">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-whatsapp" style="width: 100%; border-radius: 8px;">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                        Confirmar y Enviar a WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="brand-footer">Florcita Nail's</div>
+        <p>Manicure & Pedicure Profesional • Resaltando la belleza que hay en ti</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #a09092;">&copy; 2026 Florcita Nail's. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JAVASCRIPT DE FUNCIONALIDAD -->
+    <script>
+        // === CONFIGURA AQUÍ TU NÚMERO DE WHATSAPP (CON CÓDIGO DE PAÍS) ===
+        // Ejemplo para Ecuador: "593" + número de 9 dígitos. Cambia las comillas por tu número real.
+        const WHATSAPP_NUMBER = "593991234567";
+
+        // Horarios del día estándar
+        const defaultSlots = [
+            "09:00 AM",
+            "10:30 AM",
+            "12:00 PM",
+            "02:30 PM",
+            "04:00 PM",
+            "05:30 PM"
+        ];
+
+        let selectedSlot = null;
+
+        // Establecer la fecha actual por defecto
+        const dateInput = document.getElementById('booking-date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
+        dateInput.min = today;
+
+        // Obtener la lista de horarios ocupados para una fecha específica desde LocalStorage
+        function getOccupiedSlotsForDate(date) {
+            const key = `occupied_slots_${date}`;
+            return JSON.parse(localStorage.getItem(key)) || [];
+        }
+
+        // Guardar un horario ocupado para una fecha específica
+        function saveOccupiedSlotForDate(date, slot) {
+            const key = `occupied_slots_${date}`;
+            const occupied = getOccupiedSlotsForDate(date);
+            if (!occupied.includes(slot)) {
+                occupied.push(slot);
+                localStorage.setItem(key, JSON.stringify(occupied));
+            }
+        }
+
+        // Renderizar los botones de horarios segun la fecha seleccionada
+        function renderSlots() {
+            const container = document.getElementById('slots-container');
+            container.innerHTML = '';
+            
+            const currentDate = dateInput.value;
+            const occupiedSlots = getOccupiedSlotsForDate(currentDate);
+
+            defaultSlots.forEach(time => {
+                const isOccupied = occupiedSlots.includes(time);
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `slot-btn ${isOccupied ? 'occupied' : ''} ${selectedSlot === time ? 'selected' : ''}`;
+                btn.innerHTML = `${time} <small>${isOccupied ? 'Ocupado' : 'Disponible'}</small>`;
+
+                btn.onclick = () => handleSlotClick(time, isOccupied);
+                container.appendChild(btn);
+            });
+        }
+
+        // Al cambiar de fecha en el calendario, resetear horario seleccionado y actualizar vista
+        dateInput.addEventListener('change', () => {
+            selectedSlot = null;
+            document.getElementById('occupied-alert').style.display = 'none';
+            renderSlots();
+        });
+
+        // Manejo del clic en los botones de turno
+        function handleSlotClick(time, isOccupied) {
+            const alertBox = document.getElementById('occupied-alert');
+
+            if (isOccupied) {
+                // Muestra la alerta requerida cuando el turno está bloqueado
+                alertBox.style.display = 'block';
+                setTimeout(() => {
+                    alertBox.style.display = 'none';
+                }, 4000);
+            } else {
+                alertBox.style.display = 'none';
+                selectedSlot = time;
+                renderSlots();
+            }
+        }
+
+        // Copiar número de cuenta bancaria
+        function copyAccount() {
+            const accNum = document.getElementById('acc-number').innerText;
+            navigator.clipboard.writeText(accNum);
+            alert("¡Número de cuenta copiado al portapapeles!: " + accNum);
+        }
+
+        // Previsualizar la foto del comprobante subido
+        document.getElementById('receipt-file').addEventListener('change', function() {
+            const preview = document.getElementById('file-preview');
+            const label = document.getElementById('upload-label');
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    label.innerText = `Comprobante listo: ${file.name}`;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Enviar formulario, registrar turno y redirigir directamente a WhatsApp
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (!selectedSlot) {
+                alert('Por favor selecciona un horario disponible marcando uno de los botones.');
+                return;
+            }
+
+            const clientName = document.getElementById('client-name').value;
+            const clientPhone = document.getElementById('client-phone').value;
+            const service = document.getElementById('service-type').value;
+            const date = document.getElementById('booking-date').value;
+
+            // Bloquear el turno para esta fecha específica
+            saveOccupiedSlotForDate(date, selectedSlot);
+
+            // Crear el mensaje con formato amigable para WhatsApp
+            const textMessage = `🌸 *NUEVA RESERVA DE TURNO - FLORCITA NAIL'S* 🌸\n\n` +
+                `👤 *Cliente:* ${clientName}\n` +
+                `📱 *Teléfono:* ${clientPhone}\n` +
+                `💅 *Servicio:* ${service}\n` +
+                `📅 *Fecha:* ${date}\n` +
+                `⏰ *Horario Reservado:* ${selectedSlot}\n\n` +
+                `📸 *Nota:* Adjunto el comprobante de depósito en este chat.`;
+
+            // Enlace universal de WhatsApp api
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(textMessage)}`;
+
+            // Redirección inmediata garantizada (funciona en PC y móviles sin ser bloqueado)
+            window.location.href = whatsappUrl;
+        });
+
+        // Renderizado inicial al cargar la página
+        renderSlots();
+    </script>
+</body>
+</html>
